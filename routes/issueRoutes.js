@@ -5,7 +5,7 @@ const router = express.Router()
 router.get("/latest", getLatestIssues)
 router.get("/", getAllIssues)
 router.get("/:id",verifyToken, getSingleIssue)
-router.post("/", createIssue)
+router.post("/",verifyToken, createIssue)
 router.patch("/:id", updateIssue)
 router.delete("/:id", deleteIssue)
 
